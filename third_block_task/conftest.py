@@ -9,7 +9,7 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="function")
-def browser_fix(request):
+def browser(request):
     browser_name = request.config.getoption('browser_name').lower()
     language = request.config.getoption('language').lower()
     browser = None
